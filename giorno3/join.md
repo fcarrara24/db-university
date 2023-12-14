@@ -77,7 +77,7 @@
     ON `exam_student`.`exam_id` = `exams`.`id`
     JOIN `courses`
     ON `exams`.`course_id` = `courses`.`id`
-    WHERE `exam_student`.`vote` >= 18
     GROUP BY `students`.`id`, `courses`.`id`
+    HAVING `voto_massimo` >= 18
     ORDER BY `students`.`name`, `students`.`surname` ASC
 ```
